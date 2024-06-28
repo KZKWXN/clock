@@ -1,0 +1,126 @@
+body {
+    background-color: aqua;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow:0px;
+    row-gap: 10px;
+    border: 2px solid;
+}
+
+.screen {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    color:aliceblue;
+    max-width: 700px;
+}
+
+.size {
+    min-width: 100px;
+    min-height: 150px;
+    background-color: black;
+}
+
+.numbers {
+    column-gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ddmmyyyy {
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dd {
+    color: aliceblue;
+    display: flex;
+    min-width: 220px;
+    min-height: 50px;
+    border: 2px solid;
+    border-color: red;
+    background-color: black;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+
+.hours {
+    border: 2px solid;
+    border-color: red;
+}
+
+.minutes {
+    border: 2px solid;
+    border-color: red;
+}
+
+.seconds {
+    border: 2px solid;
+    border-color: red;
+}
+
+.section {
+    margin: 5px;
+}
+
+.top.rigth.section {
+    height: 40px;
+    width: 7px;
+    float: right;
+}
+
+.top.left.section {
+    height: 40px;
+    width: 7px;
+    float: left;
+}
+
+.center.section {
+    height: 7px;
+    width: 80px;
+    float: inline-end;
+}
+
+.top.section {
+    height: 7px;
+    width: 80px;
+    color: rgb(255, 255, 255);
+}
+
+.bottom.left.section {
+    display: fixed;
+    height: 40px;
+    width: 7px;
+    float: inline-start;
+}
+
+.bottom.rigth.section {
+    height: 40px;
+    width: 7px;
+    float: inline-end;
+}
+
+.bottom.down {
+    height: 7px;
+    width: 80px;
+    float: inline-start;
+}
+
+.active {
+    background-color: rgb(0, 255, 89);
+}
+
+.deactive {
+    background-color: rgba(128, 128, 128, 0.7);
+}
