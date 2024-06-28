@@ -62,9 +62,7 @@ function onload () {setInterval ( function saytime() {
     let day = now.getDate();
 
     actdeact()
-    hours();
-    minuts();
-    seconds(); 
+    time(); 
     tmounths(param.transmounth);
     mounths.textContent = String(transmounth)
 }, 1000);}
@@ -90,12 +88,85 @@ function actdeact () {
     }   
 }
 
-
-function hours () {
+function time () {
     let now = new Date();
     let hour = now.getHours();
-    
-    if (hour == 1) {
+    let minut = now.getMinutes();
+    let second = now.getSeconds();
+    if (second == 0) {
+        second = '00';
+    } else if (second == 1) {
+        second = '01';
+    } else if (second == 2) {
+        second = '02';
+    } else if (second == 3) {
+        second = '03';
+    } else if (second == 4) {
+        second = '04';
+    } else if (second == 5) {
+        second = '05';
+    } else if (second == 6) {
+        second = '06';
+    } else if (second == 7) {
+        second = '07';
+    } else if (second == 8) {
+        second = '08';
+    } else if (second == 9) {
+        second = '09';
+    }
+
+    if (minut == 0) {
+        minut = '00';
+    } else if (minut == 1) {
+        minut = '01';
+    } else if (minut == 2) {
+        minut = '02';
+    } else if (minut == 3) {
+        minut = '03';
+    } else if (minut == 4) {
+        minut = '04';
+    } else if (minut == 5) {
+        minut = '05';
+    } else if (minut == 6) {
+        minut = '06';
+    } else if (minut == 7) {
+        second = '07';
+    } else if (minut == 8) {
+        minut = '08';
+    } else if (minut == 9) {
+        minut = '09';
+    }
+
+    if (hour == 0) {
+        hour = '00';
+    } else if (hour == 1) {
+        hour = '01';
+    } else if (hour == 2) {
+        hour = '02';
+    } else if (hour == 3) {
+        hour = '03';
+    } else if (hour == 4) {
+        hour = '04';
+    } else if (hour == 5) {
+        hour = '05';
+    } else if (hour == 6) {
+        hour = '06';
+    } else if (hour == 7) {
+        hour = '07';
+    } else if (hour == 8) {
+        hour = '08';
+    } else if (hour == 9) {
+        hour = '09';
+    }
+    let alldate = String(hour)+String(minut)+String(second);
+    let result = alldate.split('');
+    let A = result[0];
+    let B = result[1];
+    let C = result[2];
+    let D = result[3];
+    let E = result[4];
+    let F = result[5];
+    if ( A == 0) {
         hfbr.classList.remove('deactive')
         hfbr.classList.add('active')
         hfbl.classList.remove('deactive')
@@ -107,2832 +178,25 @@ function hours () {
         hft.classList.remove('deactive')
         hft.classList.add('active')
         hfbd.classList.remove('deactive')
+        hfbd.classList.add('active')    
+    } else if (A == 1) {
+        hftr.classList.remove('deactive')
+        hftr.classList.add('active')
+        hfbr.classList.remove('deactive')
+        hfbr.classList.add('active')        
+    } else if (A == 2) {
+        hft.classList.remove('deactive')
+        hft.classList.add('active')
+        hftr.classList.remove('deactive')
+        hftr.classList.add('active')
+        hfbl.classList.remove('deactive')
+        hfbl.classList.add('active')
+        hfbd.classList.remove('deactive')
         hfbd.classList.add('active')
-
-        hstr.classList.remove('deactive')
-        hstr.classList.add('active')
-        hsbr.classList.remove('deactive')
-        hsbr.classList.add('active')
-
-    } else if (hour == 2) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 3) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 4) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 5) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 6) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 7) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 8) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 9) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 10) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 11) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 12) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 13) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 14) {
-        fhnumb ();
-        shnumb();
-        
-    } else if (hour == 15) {
-        fhnumb ();
-        shnumb();
-       
-    } else if (hour == 16) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 17) {
-        fhnumb ();
-        shnumb();
-    } else if (hour == 18) {
-        fhnumb ();
-        shnumb();
-    } else if (hour == 19) {
-        fhnumb ();
-        shnumb();
-    } else if (hour == 20) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 21) {
-        fhnumb ();
-        shnumb();
-    } else if (hour == 22) {
-        fhnumb ();
-        shnumb();
-
-    } else if (hour == 23) {
-        fhnumb ();
-        shnumb();
-    } else if (hour == 0) {
-        fhnumb ();
-        shnumb();
-    } else {
-
-    }
-
-}
-
-function minuts () {
-    let now = new Date();
-    let minut = now.getMinutes();
-   
-    if (minut == 1) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 2) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 3) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 4) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 5) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 6) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 7) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-
-    } else if (minut == 8) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 9) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 10) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 11) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 12) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 13) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 14) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        
-    } else if (minut == 15) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-       
-    } else if (minut == 16) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 17) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-    
-    } else if (minut == 18) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-    } else if (minut == 19) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-    } else if (minut == 20) {
-        
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-    } else if (minut == 21) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 22) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 23) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 24) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 25) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 26) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 27) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-
-    } else if (minut == 28) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 29) {
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 30) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 31) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 32) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 33) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 34) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 35) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 36) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 37) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-
-    } else if (minut == 38) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 39) {
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 40) {
-
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 41) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 42) {
-
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 43) {
-
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 44) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 45) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 46) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 47) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-
-    } else if (minut == 48) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 49) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 50) {
-
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 51) {
-
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-
-    } else if (minut == 52) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 53) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 54) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 55) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-
-    } else if (minut == 56) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else if (minut == 57) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-
-    } else if (minut == 58) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 59) {
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfc.classList.remove('deactive')
-        mfc.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        msc.classList.remove('deactive')
-        msc.classList.add('active')
-
-    } else if (minut == 0) {
-        mftr.classList.remove('deactive')
-        mftr.classList.add('active')
-        mfbr.classList.remove('deactive')
-        mfbr.classList.add('active')
-        mft.classList.remove('deactive')
-        mft.classList.add('active')
-        mfbd.classList.remove('deactive')
-        mfbd.classList.add('active')
-        mftl.classList.remove('deactive')
-        mftl.classList.add('active')
-        mfbl.classList.remove('deactive')
-        mfbl.classList.add('active')
-
-        mstr.classList.remove('deactive')
-        mstr.classList.add('active')
-        msbr.classList.remove('deactive')
-        msbr.classList.add('active')
-        mst.classList.remove('deactive')
-        mst.classList.add('active')
-        msbd.classList.remove('deactive')
-        msbd.classList.add('active')
-        mstl.classList.remove('deactive')
-        mstl.classList.add('active')
-        msbl.classList.remove('deactive')
-        msbl.classList.add('active')
-
-    } else { 
-
-    }
-
-}
-
-function seconds () {
-    let now = new Date();
-    let second = now.getSeconds();
-   
-    if (second == 1) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-    } else if (second == 2) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 3) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 4) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 5) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 6) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 7) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-
-    } else if (second == 8) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 9) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 10) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 11) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-    } else if (second == 12) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 13) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 14) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        
-    } else if (second == 15) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-       
-    } else if (second == 16) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 17) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-    
-    } else if (second == 18) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-    } else if (second == 19) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-    } else if (second == 20) {
-        
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-    } else if (second == 21) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-
-
-    } else if (second == 22) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 23) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 24) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 25) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 26) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 27) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-
-    } else if (second == 28) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 29) {
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 30) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 31) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-    } else if (second == 32) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 33) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 34) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 35) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 36) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 37) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-
-    } else if (second == 38) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 39) {
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 40) {
-
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 41) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-    } else if (second == 42) {
-
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 43) {
-
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 44) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 45) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 46) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 47) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-
-    } else if (second == 48) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 49) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 50) {
-
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 51) {
-
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-
-    } else if (second == 52) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 53) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 54) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 55) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-
-    } else if (second == 56) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else if (second == 57) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-
-    } else if (second == 58) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 59) {
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfc.classList.remove('deactive')
-        sfc.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        ssc.classList.remove('deactive')
-        ssc.classList.add('active')
-
-    } else if (second == 0) {
-        sftr.classList.remove('deactive')
-        sftr.classList.add('active')
-        sfbr.classList.remove('deactive')
-        sfbr.classList.add('active')
-        sft.classList.remove('deactive')
-        sft.classList.add('active')
-        sfbd.classList.remove('deactive')
-        sfbd.classList.add('active')
-        sftl.classList.remove('deactive')
-        sftl.classList.add('active')
-        sfbl.classList.remove('deactive')
-        sfbl.classList.add('active')
-
-        sstr.classList.remove('deactive')
-        sstr.classList.add('active')
-        ssbr.classList.remove('deactive')
-        ssbr.classList.add('active')
-        sst.classList.remove('deactive')
-        sst.classList.add('active')
-        ssbd.classList.remove('deactive')
-        ssbd.classList.add('active')
-        sstl.classList.remove('deactive')
-        sstl.classList.add('active')
-        ssbl.classList.remove('deactive')
-        ssbl.classList.add('active')
-
-    } else { 
-
-    }
-
-}
-
-function firone (paramnumb) {
-    let now = new Date();
-    let hour = now.getHours();
-    let minut = now.getMinutes();
-    let second = now.getSeconds();
-    if (hour == 9) {
-    
-    } else if (hour == 10) {
-        
-    } else (
-        console.log('Error')
-    );
-}
-
-function fhnumb () {
-    let now = new Date();
-    let hour = now.getHours();
-    if (hour == 0 ||
-        hour == 1 || 
-        hour == 2 || 
-        hour == 3 || 
-        hour == 4 || 
-        hour == 5 || 
-        hour == 6 || 
-        hour == 7 || 
-        hour == 8 || 
-        hour == 9) {
-            hfbr.classList.remove('deactive')
-            hfbr.classList.add('active')
-            hfbl.classList.remove('deactive')
-            hfbl.classList.add('active')
-            hftl.classList.remove('deactive')
-            hftl.classList.add('active')
-            hftr.classList.remove('deactive')
-            hftr.classList.add('active')
-            hft.classList.remove('deactive')
-            hft.classList.add('active')
-            hfbd.classList.remove('deactive')
-            hfbd.classList.add('active')
-    } else if (hour == 10 ||
-        hour == 11 ||
-        hour == 12 ||
-        hour == 13 ||
-        hour == 14 ||
-        hour == 15 ||
-        hour == 16 ||
-        hour == 17 ||
-        hour == 18 ||
-        hour == 19) {
-            hftr.classList.remove('deactive')
-            hftr.classList.add('active')
-            hfbr.classList.remove('deactive')
-            hfbr.classList.add('active')        
-    } else if (
-        hour == 20 ||
-        hour == 21 ||
-        hour == 22 ||
-        hour == 23) {
-            hft.classList.remove('deactive')
-            hft.classList.add('active')
-            hftr.classList.remove('deactive')
-            hftr.classList.add('active')
-            hfbl.classList.remove('deactive')
-            hfbl.classList.add('active')
-            hfbd.classList.remove('deactive')
-            hfbd.classList.add('active')
-            hfc.classList.remove('deactive')
-            hfc.classList.add('active')
-    } else {
-        console.log('Error')
-
-    }
-}
-
-function shnumb () {
-    let now = new Date();
-    let hour = now.getHours();
-    if (hour == 0 ||
-        hour == 10 ||
-        hour == 20
-    ) {
+        hfc.classList.remove('deactive')
+        hfc.classList.add('active')
+    };
+    if (B == 0) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hsbl.classList.remove('deactive')
@@ -2945,20 +209,12 @@ function shnumb () {
         hst.classList.add('active')
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
-    } else if (
-        hour == 1 ||
-        hour == 11 ||
-        hour == 21
-    )  {
+    } else if (B == 1) {
         hstr.classList.remove('deactive')
         hstr.classList.add('active')
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
-    } else if (
-        hour == 2 ||
-        hour == 12 ||
-        hour == 22
-    ) {
+    } else if (B == 2) {
         hst.classList.remove('deactive')
         hst.classList.add('active')
         hstr.classList.remove('deactive')
@@ -2968,12 +224,8 @@ function shnumb () {
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 3 ||
-        hour == 13 ||
-        hour == 23
-    ) {
+        hsc.classList.add('active')        
+    } else if (B == 3) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hstr.classList.remove('deactive')
@@ -2983,11 +235,8 @@ function shnumb () {
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 4 ||
-        hour == 14
-    ) {
+        hsc.classList.add('active')        
+    } else if (B == 4) {
         hstr.classList.remove('deactive')
         hstr.classList.add('active')
         hstl.classList.remove('deactive')
@@ -2995,51 +244,39 @@ function shnumb () {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 5 ||
-        hour == 15
-    ) {
+        hsc.classList.add('active')        
+    } else if (B == 5) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
-        hstr.classList.remove('deactive')
-        hstr.classList.add('active')
+        hstl.classList.remove('deactive')
+        hstl.classList.add('active')
         hst.classList.remove('deactive')
         hst.classList.add('active')
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 6 ||
-        hour == 16
-    ) {
+        hsc.classList.add('active')        
+    } else if (B == 6) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hsbl.classList.remove('deactive')
         hsbl.classList.add('active')
-        hstr.classList.remove('deactive')
-        hstr.classList.add('active')
+        hstl.classList.remove('deactive')
+        hstl.classList.add('active')
         hst.classList.remove('deactive')
         hst.classList.add('active')
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 7 ||
-        hour == 17
-    ) {
+        hsc.classList.add('active')       
+    } else if (B == 7) {
         hstr.classList.remove('deactive')
         hstr.classList.add('active')
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hst.classList.remove('deactive')
         hst.classList.add('active')
-    } else if (
-        hour == 8 ||
-        hour == 18
-    ) {
+    } else if (B == 8) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hsbl.classList.remove('deactive')
@@ -3053,11 +290,8 @@ function shnumb () {
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else if (
-        hour == 9 ||
-        hour == 19
-    ) {
+        hsc.classList.add('active')        
+    } else if (B == 9) {
         hsbr.classList.remove('deactive')
         hsbr.classList.add('active')
         hstl.classList.remove('deactive')
@@ -3069,10 +303,444 @@ function shnumb () {
         hsbd.classList.remove('deactive')
         hsbd.classList.add('active')
         hsc.classList.remove('deactive')
-        hsc.classList.add('active')
-    } else {
-        console.log('Error')
-    }
+        hsc.classList.add('active')        
+    };
+    if (C == 0) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mfbl.classList.remove('deactive')
+        mfbl.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+    } else if (C == 1) {
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+    } else if (C == 2) {
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mfbl.classList.remove('deactive')
+        mfbl.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    } else if (C == 3) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    } else if (C == 4) {
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    } else if (C == 5) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')          
+    } else if (C == 6) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mfbl.classList.remove('deactive')
+        mfbl.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    } else if (C == 7) {
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+    } else if (C == 8) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mfbl.classList.remove('deactive')
+        mfbl.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    } else if (C == 9) {
+        mfbr.classList.remove('deactive')
+        mfbr.classList.add('active')
+        mftl.classList.remove('deactive')
+        mftl.classList.add('active')
+        mftr.classList.remove('deactive')
+        mftr.classList.add('active')
+        mft.classList.remove('deactive')
+        mft.classList.add('active')
+        mfbd.classList.remove('deactive')
+        mfbd.classList.add('active')
+        mfc.classList.remove('deactive')
+        mfc.classList.add('active')        
+    };
+    if (D == 0) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        msbl.classList.remove('deactive')
+        msbl.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+    } else if (D == 1) {
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+    } else if (D == 2) {
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        msbl.classList.remove('deactive')
+        msbl.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')        
+    } else if (D == 3) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')        
+    } else if (D == 4) {
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')        
+    } else if (D == 5) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')       
+    } else if (D == 6) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        msbl.classList.remove('deactive')
+        msbl.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')       
+    } else if (D == 7) {
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+    } else if (D == 8) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        msbl.classList.remove('deactive')
+        msbl.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')        
+    } else if (D == 9) {
+        msbr.classList.remove('deactive')
+        msbr.classList.add('active')
+        mstl.classList.remove('deactive')
+        mstl.classList.add('active')
+        mstr.classList.remove('deactive')
+        mstr.classList.add('active')
+        mst.classList.remove('deactive')
+        mst.classList.add('active')
+        msbd.classList.remove('deactive')
+        msbd.classList.add('active')
+        msc.classList.remove('deactive')
+        msc.classList.add('active')        
+    };
+    if (E == 0) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sfbl.classList.remove('deactive')
+        sfbl.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+    } else if (E == 1) {
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+    } else if (E == 2) {
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sfbl.classList.remove('deactive')
+        sfbl.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')        
+    } else if (E == 3) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')        
+    } else if (E == 4) {
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')        
+    } else if (E == 5) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')          
+    } else if (E == 6) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sfbl.classList.remove('deactive')
+        sfbl.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')       
+    } else if (E == 7) {
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+    } else if (E == 8) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sfbl.classList.remove('deactive')
+        sfbl.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')        
+    } else if (E == 9) {
+        sfbr.classList.remove('deactive')
+        sfbr.classList.add('active')
+        sftl.classList.remove('deactive')
+        sftl.classList.add('active')
+        sftr.classList.remove('deactive')
+        sftr.classList.add('active')
+        sft.classList.remove('deactive')
+        sft.classList.add('active')
+        sfbd.classList.remove('deactive')
+        sfbd.classList.add('active')
+        sfc.classList.remove('deactive')
+        sfc.classList.add('active')        
+    };
+    if (F == 0) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        ssbl.classList.remove('deactive')
+        ssbl.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+    } else if (F == 1) {
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+    } else if (F == 2) {
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        ssbl.classList.remove('deactive')
+        ssbl.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    } else if (F == 3) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    } else if (F == 4) {
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    } else if (F == 5) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')       
+    } else if (F == 6) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        ssbl.classList.remove('deactive')
+        ssbl.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    } else if (F == 7) {
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+    } else if (F == 8) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        ssbl.classList.remove('deactive')
+        ssbl.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    } else if (F == 9) {
+        ssbr.classList.remove('deactive')
+        ssbr.classList.add('active')
+        sstl.classList.remove('deactive')
+        sstl.classList.add('active')
+        sstr.classList.remove('deactive')
+        sstr.classList.add('active')
+        sst.classList.remove('deactive')
+        sst.classList.add('active')
+        ssbd.classList.remove('deactive')
+        ssbd.classList.add('active')
+        ssc.classList.remove('deactive')
+        ssc.classList.add('active')        
+    };
 }
 
 window.onload(onload());

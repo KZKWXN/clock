@@ -6,8 +6,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    justify-content: center;
-    text-align: center;
     box-shadow:0px;
     row-gap: 10px;
     border: 2px solid;
@@ -51,9 +49,6 @@ body {
     justify-content: center;
     flex-direction: row;
 }
-
-
-
 
 .hours {
     border: 2px solid;
@@ -122,5 +117,5 @@ body {
 }
 
 .deactive {
-    background-color: rgba(128, 128, 128, 0.7);
+    background-color: rgb(17, 17, 17);
 }
